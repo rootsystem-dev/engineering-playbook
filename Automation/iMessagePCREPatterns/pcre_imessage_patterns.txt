@@ -1,0 +1,35 @@
+# Political fundraising & campaign messages
+(?i)(?=.*(?:running for|congress|democrat|republican|campaign))(?=.*(?:donat|chip in|founding donor|contribute))
+
+# Job scam patterns 
+(?i)(?=.*(?:remote|part-time|full-time|job|hiring|recruitment))(?=.*(?:daily salary|\$\d+(?:,\d+)? (?:per|a) day|\$\d+(?:,\d+)? (?:per|a) hour))(?=.*(?:whatsapp|contact|join our team))
+
+# "Too good to be true" financial offers
+(?i)(?=.*(?:earn \$|\$\d+(?:,\d+)? a day|minimum daily|income of \$))(?=.*(?:flexible|work from home|work anytime|anywhere))
+
+# MCA/Debt reduction scams
+(?i)(?=.*(?:MCA|overwhelming|unmanageable))(?=.*(?:payment|loan|debt))(?=.*(?:80%|reduce|shrink|settle|settled|48 hrs|funding portal))(?!.*(?:Patelco|Credit Union|payment due))
+
+# Online shopping scams (USPS/delivery notification with suspicious domains)
+(?i)(?=.*(?:parcel|package|delivery|shipment|USPS|tracking))(?=.*(?:temporarily detained|invalid address|confirm|within 24 hours))(?=.*(?:\.top|\.xyz|\.club|copy the link|com-\w+\.top))(?!.*(?:verification code|security code|authentication))
+
+# Direct donation solicitation
+(?i)(?=.*(?:donation|donat|giving|giving tuesday|chip in))(?=.*(?:triple your impact|before midnight|match expires|limited time))(?!.*(?:concert|event|ticket))
+
+# Generic "stop to quit" marketing messages
+(?i).*stop to quit$
+
+# Generic "reply stop to end" marketing messages
+(?i)(?=.*(?:reply stop to|reply help for|text stop to|msg & data rates may apply))(?!.*(?:verification code|security code|confirmation code|2FA|chase|bank|capital one|loan payment|equifax|credit|card))
+
+# Marketing outreach messages
+(?i)^(?=.*(?:hi|hello))(?=.*(?:my name is|this is))(?=.*(?:share some opportunities|would like to offer|could i share))(?!.*(?:your loan|payment|account|verification))
+
+# "Opt-in to messages" marketing
+(?i)(?=.*(?:reply yes to opt|choose to receive|updates and personalized|reply join))(?!.*(?:verification|code|account|bank|credit card))
+
+# Filter out typical advertisement language
+(?i)(?=.*(?:limited time|offer|exclusive|best deal|discount|sale|promotion))(?=.*(?:click here|sign up|join now|register today|buy now))(?!.*(?:concert|event|ticket|payment))
+
+# Protect verification codes, banking notifications, loan payments
+(?i)^((?!(?:verification code|security code|confirmation code|2FA|code|verify|authenticate|chase|bank|capital one|loan payment|credit card|debit card|fraud alert|balance|available|transaction)).)*$
