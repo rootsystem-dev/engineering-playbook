@@ -1,0 +1,3 @@
+[submodule "twelve-factor"]
+	path = twelve-factor
+	url = git@github.com:twelve-factor/twelve-factor.git
